@@ -12,7 +12,7 @@ NODE_PORT=26657
 
 cd $HOME
 
-echo -e "${fmt}\nRitual installation${end}" && sleep 3
+echo -e "${fmt}\nInitia installation${end}" && sleep 3
 
 if [ -z "$MONIKER" ]; then
   echo -e "${err}\nYou have not set MONIKER, please set the variable and try again${end}" && sleep 1
