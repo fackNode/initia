@@ -53,10 +53,11 @@ fi
 
 echo -e "${fmt} Setup initiad${end}" && sleep 1
 
-initiad config chain-id $CHAIN_ID
-initiad config set client keyring-backend test
+cd $HOME
+initiad init $MONIKER --chain-id $CHAIN_ID
+initiad config set client chain-id $CHAIN_ID
 initiad config set client node tcp://localhost:$NODE_PORT
-initiad init "$MONIKER" --chain-id $CHAIN_ID
+initiad config set client keyring-backend os
 
 
 echo -e "${fmt} Download and set up genesis.json, addrbook.json${end}" && sleep 1
